@@ -1,0 +1,131 @@
+LOGISTICS PACKAGE SORTING SYSTEM
+================================
+
+ORIGINAL PACKAGE DATA
+--------------------------------
+Package ID    Weight    Position
+P1            20        1
+P2            15        2
+P3            20        3
+P4            10        4
+P5            15        5
+P6            20        6
+P7            25        7
+P8            10        8
+
+
+MERGE SORT
+==========
+
+Intermediate Merge Steps:
+
+Step 1:
+P2(15) P1(20)
+
+Step 2:
+P4(10) P3(20)
+
+Step 3:
+P4(10) P2(15) P1(20) P3(20)
+
+Step 4:
+P5(15) P6(20)
+
+Step 5:
+P8(10) P7(25)
+
+Step 6:
+P8(10) P5(15) P6(20) P7(25)
+
+Step 7:
+P4(10) P8(10) P2(15) P5(15)
+P1(20) P3(20) P6(20) P7(25)
+
+
+FINAL MERGE SORT RESULT
+-----------------------
+
+P4 -> Weight = 10
+P8 -> Weight = 10
+P2 -> Weight = 15
+P5 -> Weight = 15
+P1 -> Weight = 20
+P3 -> Weight = 20
+P6 -> Weight = 20
+P7 -> Weight = 25
+
+Number of comparisons = 16
+
+Stability: STABLE
+
+Equal Weight Order:
+10 kg : P4 -> P8
+15 kg : P2 -> P5
+20 kg : P1 -> P3 -> P6
+
+
+QUICK SORT
+==========
+
+Intermediate Partition Steps:
+
+Step 1:
+Pivot = 10
+
+P4(10) P8(10) P3(20) P1(20)
+P5(15) P6(20) P7(25) P2(15)
+
+
+Step 2:
+Pivot = 15
+
+P5(15) P2(15) P3(20)
+P6(20) P7(25) P1(20)
+
+
+Step 3:
+Pivot = 20
+
+P3(20) P6(20) P1(20) P7(25)
+
+
+Step 4:
+Pivot = 20
+
+P3(20) P6(20)
+
+
+FINAL QUICK SORT RESULT
+-----------------------
+
+P4 -> Weight = 10
+P8 -> Weight = 10
+P5 -> Weight = 15
+P2 -> Weight = 15
+P3 -> Weight = 20
+P6 -> Weight = 20
+P1 -> Weight = 20
+P7 -> Weight = 25
+
+Number of comparisons = 16
+
+Stability: NOT STABLE
+
+Equal Weight Order:
+10 kg : P4 -> P8
+15 kg : P5 -> P2
+20 kg : P3 -> P6 -> P1
+
+
+FINAL CONCLUSION
+================
+
+Both Merge Sort and Quick Sort successfully sort
+the package weights in ascending order.
+
+Merge Sort preserves the original relative order
+of equal-weight packages.
+
+Therefore, Merge Sort is more suitable when
+maintaining the original order of equal-weight
+packages is important.
