@@ -1,0 +1,11 @@
+Number of packages: 8
+
+Package ID    Weight
+P1            20
+P2            15
+P3            20
+P4            10
+P5            15
+P6            20
+P7            25
+P8            10
